@@ -1,0 +1,79 @@
+<html> 
+<head>
+<title> My registration page </title>
+<Style type="text/css">
+body {background-color:pink;}
+h1 { color:black;}
+</style>
+<script> 
+function formvalidation(){
+	var Name = document.getElementById("FullName").value;
+	if (Name == "" || Name == null)
+	{
+		alert("Please enter your full name");
+		return false;								 
+	}
+
+	var LoginId = document.getElementById("LoginId").value;
+	if(LoginId == "" || LoginId == null)
+	{
+		alert("Please enter LoginId");
+		return false;
+	}
+
+	var Password = document.getElementById("Password").value;
+	if(Password == "" || Password == null)
+	{
+		alert("Please enter Password");
+		return false;
+	}
+
+	var Address = document.getElementById("Address").value;
+	if(Address == "" || Address == null)
+	{
+		alert("Please enter Address");
+		return false;
+	}
+
+	var City = document.getElementById("City").value;
+	if(City == "" || City == null)
+	{
+		alert("Please enter City");
+		return false;
+	}
+
+	var State = document.getElementById("State").value;
+	if(State == "" || State == null)
+	{
+		alert("Please enter State");
+		return false;
+	}
+
+	var phone = document.getElementById("Phone").value;
+	if(Phone == "" || Phone == null)
+	{
+		alert("Please enter Phone");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+</script>
+</head>
+<body>
+    <h1>REGISTRATION FORM</h1>
+    <form onsubmit = "return formvalidation()">
+		Full Name <input type="text" name="FullName" id="FullName"><br>
+		Login ID <input type="text" name="LoginId" id="LoginId"><br>
+        Password <input type="password" name="Password" id="Password"><br>
+        Address <input type="text" name="Address" id="Address"><br>
+        City <input type="text" name="City" id="City"><br>
+        State <input type="text" name="State" id="State"><br>
+        Phone <input type="text" name="Phone" id="Phone"><br>
+        <input type="submit" name="Submit" value="Submit">
+    	<input type="submit" name="Cancel" value="Cancel">
+    </form>
+</body> 
+</html> 
